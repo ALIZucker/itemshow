@@ -1,13 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
-    .name-pro{
+    .table-trush{
+       @apply ml-[4vw] w-[7vw] h-[3vh] lg:w-[3vw] lg:h-[5vh] lg:ml-[3vw];
+    }
+    .table-image {
+        @apply ml-[3vw] w-[13vw] h-[7vh] lg:w-[15vw] lg:h-[17vh] rounded-[16px] trans;
+    }
+
+    .table-r {
+        @apply hover:bg-gray-300;
+    }
+
+    .headertable {
+        @apply bg-green-700 text-gray-200;
+    }
+
+    .name-pro {
         @apply text-[5vw] tracking-wider lg:text-[3vw];
     }
-    .input-text{
+
+    .input-text {
         @apply inputall lg:w-[25vw] lg:h-[8vh] lg:text-[1.5vw];
     }
+
     .job-pro {
         @apply text-[3vw] tracking-wider text-gray-600 lg:ml-[2.5vw] lg:text-[1.9vw];
     }

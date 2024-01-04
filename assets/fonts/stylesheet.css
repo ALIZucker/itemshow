@@ -24,17 +24,20 @@
 .fontheader{
     font-family: Domine;
 }
-.name-pro{
+.name-pro {
     font-family: "Rubik Scribble";
     font-weight: bold;
     text-shadow:  2px 2px 4px  #2d51cc;
 }
-.job-pro{
+.job-pro , .headertable{
     font-family: "Rubik Scribble";
     font-weight: 600;
     text-shadow:  2px 2px 4px #59595b;
 }
 .lableall , .input-text{
     font-family: Domine;
+}
+.table-r > td {
+    font-family: Domine ;
 }
 
