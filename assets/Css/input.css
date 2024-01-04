@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .name-pro{
+        @apply text-[5vw] tracking-wider lg:text-[3vw];
+    }
+    .input-text{
+        @apply inputall lg:w-[25vw] lg:h-[8vh] lg:text-[1.5vw];
+    }
+    .job-pro {
+        @apply text-[3vw] tracking-wider text-gray-600 lg:ml-[2.5vw] lg:text-[1.9vw];
+    }
+
+    .box-profile {
+        @apply flex flex-col justify-center items-center mt-[10vh] lg:mt-[29vh]  lg:items-start lg:ml-[2vw];
+    }
+
+    .imagepro {
+        @apply rounded-[50%] w-[25vw] h-[16vh] lg:w-[25vw] lg:h-[36vh];
+    }
+
+    .profileme {
+        @apply flex flex-row items-end justify-around absolute top-[22vh] w-full lg:top-[30vh] lg:justify-start lg:items-center;
+    }
+
+    .fontheader {
+        @apply text-[3vw];
+    }
+
+    .box-input {
+        @apply w-full lg:flex lg:flex-row lg:justify-start ;
+    }
+
+    .inputall {
+        width: 70%;
+        height: 5vh;
+        font-size: 3.3vw;
+        padding: 0 1vw;
+        border-radius: 8px;
+        border: 1px gray solid;
+
+    }
+
+    .lableall {
+        width: 11%;
+        height: 5vh;
+        font-size: 3.3vw;
+        padding: 0 1vw;
+
+
+    }
+
+    .trans {
+        transition: transform .2s ease-in-out;
+    }
+
+    .trans:hover {
+        transform: scale(1.2);
+    }
+
+    .wrapper {
+        position: absolute;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .aback {
+        display: block;
+        width: 42vw;
+        height: 5vh;
+        line-height: 40px;
+        font-size: 3vw;
+        font-weight: 800;
+        text-decoration: none;
+        color: #333;
+        border: 2px solid #333;
+        letter-spacing: 2px;
+        text-align: center;
+
+        transition: all .35s;
+    }
+
+    a span {
+        position: relative;
+        z-index: 2;
+    }
+
+    a:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #ff003b;
+        transition: all .35s;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    a:hover:after {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Domine';
+    src: url('Domine-Regular.eot');
+    src: url('Domine-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Domine-Regular.woff2') format('woff2'),
+        url('Domine-Regular.woff') format('woff'),
+        url('Domine-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik Scribble';
+    src: url('RubikScribble-Regular.eot');
+    src: url('RubikScribble-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RubikScribble-Regular.woff2') format('woff2'),
+        url('RubikScribble-Regular.woff') format('woff'),
+        url('RubikScribble-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.fontheader{
+    font-family: Domine;
+}
+.name-pro{
+    font-family: "Rubik Scribble";
+    font-weight: bold;
+    text-shadow:  2px 2px 4px  #2d51cc;
+}
+.job-pro{
+    font-family: "Rubik Scribble";
+    font-weight: 600;
+    text-shadow:  2px 2px 4px #59595b;
+}
+.lableall , .input-text{
+    font-family: Domine;
+}
+
