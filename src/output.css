@@ -622,10 +622,9 @@ video {
 }
 
 .headertable {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+  background-image: linear-gradient(to left,#5d6ecf,#2b346b) ;
 }
 
 .name-pro {
@@ -723,7 +722,9 @@ video {
 
 .box-input {
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: 12px;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
 }
 
 @media (min-width: 1024px) {
@@ -745,11 +746,16 @@ video {
   }
 }
 
+.box-input {
+  background-image: linear-gradient(to left,#5d6ecf,#2b346b) ;
+}
+
 .lableall {
   width: 11%;
   height: 5vh;
   font-size: 3.3vw;
   padding: 0 1vw;
+  color: #d1d5db;
 }
 
 .wrapper {
@@ -790,6 +796,12 @@ video {
   font-weight: 600;
 }
 
+@media (min-width: 1024px) {
+  #botmodal {
+    font-size: 2vw;
+  }
+}
+
 #textmodal {
   margin-top: 2vw;
   padding-left: 1vw;
@@ -798,10 +810,29 @@ video {
   font-weight: 600;
 }
 
+@media (min-width: 1024px) {
+  #textmodal {
+    font-size: 2vw;
+  }
+}
+
+#bodymodal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  opacity: 0.4;
+}
+
 #box-modal {
   position: fixed;
   top: -50vh;
   left: 15vw;
+  z-index: 10;
   display: flex;
   height: 35vh;
   width: 70vw;
@@ -810,15 +841,28 @@ video {
   justify-content: center;
   border-radius: 12px;
   border-width: 2px;
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(82 82 82 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  #box-modal {
+    left: 22vw;
+    height: 45vh;
+    width: 50vw;
+  }
 }
 
 #image-modal {
   height: 19vh;
   width: 25vw;
+}
+
+@media (min-width: 1024px) {
+  #image-modal {
+    height: 12vh;
+    width: 12vw;
+  }
 }
 
 #botmodal:hover{
@@ -872,6 +916,10 @@ a:hover:after {
   margin-top: 5vh;
 }
 
+.block {
+  display: block;
+}
+
 .table {
   display: table;
 }
@@ -895,6 +943,11 @@ a:hover:after {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.text-\[\#d1d5db\] {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .transition {

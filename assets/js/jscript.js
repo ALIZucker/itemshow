@@ -7,6 +7,7 @@ const man = document.getElementById('man');
 const modalBox = document.getElementById('box-modal');
 const imagemodal = document.getElementById('image-modal');
 const textmodal = document.getElementById('textmodal');
+const bodymodal = document.getElementById('bodymodal');
 ///////////////////////////////////////////////main Code
 
 let customer = defultValue()
@@ -17,6 +18,7 @@ showTable(customer)
 function botmodal() {
     modalBox.style.top = "-50vh";
     modalBox.style.transition = "all 0.5s ease-out"
+    bodymodal.style.display="none"
 
 }
 
@@ -40,12 +42,14 @@ function valadation(namme, phoneme) {
         textmodal.innerHTML = "Unfortunately, no text has been entered"
         modalBox.style.top = "32vh";
         modalBox.style.transition = "all 1s ease-out"
+        bodymodal.style.display="block"
         boolvalue = false;
     } else {
         imagemodal.src = "assets/image/well-done.png"
         textmodal.innerHTML = "The information was saved correctly"
         modalBox.style.top = "32vh";
         modalBox.style.transition = "all 1s ease-out"
+        bodymodal.style.display="block"
         boolvalue = true;
     }
     return boolvalue;
