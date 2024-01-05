@@ -7,10 +7,24 @@ const woman = document.getElementById('woman');
 
 //main Code
 
-const customer = defultValue()
+let customer = defultValue()
 showTable(customer)
 
 //function
+function removeitem(id) {
+    console.log(id)
+    const temparray = [];
+
+    customer.forEach((value, index) => {
+        if (index !== id) {
+            temparray.push(value);
+        }
+    });
+    customer = temparray
+    showTable(temparray);
+}
+
+
 function addPerson() {
     let p;
     if (man.checked) {
@@ -51,11 +65,10 @@ function showTable(myCustom) {
                                                   src="${value.srcimg}"></td>
                  <td><span>${value.FirstName}</span></td>
                 <td><span>${value.phone}</span></td>
-                  <td><img class="table-trush" src="assets/image/bin.png"></td>
+                  <td><img onclick="removeitem(${index})" class="table-trush" src="assets/image/bin.png"></td>
 </tr> \n`
 
     });
     textStr += ` </table>`
-    console.log(textStr)
     tableRow.innerHTML = textStr
 }
