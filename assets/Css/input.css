@@ -3,9 +3,21 @@
 @tailwind utilities;
 
 @layer components {
-    .table-trush{
-       @apply ml-[4vw] w-[7vw] h-[3vh] lg:w-[3vw] lg:h-[5vh] lg:ml-[3vw];
+    .radiobox{
+       @apply inline-block space-x-6 ml-[5vw] mt-[3vh] text-[3vw];
     }
+    #man, #woman {
+        @apply font-semibold
+    }
+
+    .tabledy {
+        @apply w-full text-[3vw] text-center lg:text-[1.9vw];
+    }
+
+    .table-trush {
+        @apply ml-[4vw] w-[7vw] h-[3vh] lg:w-[3vw] lg:h-[5vh] lg:ml-[3vw] hover:cursor-pointer;
+    }
+
     .table-image {
         @apply ml-[3vw] w-[13vw] h-[7vh] lg:w-[15vw] lg:h-[17vh] rounded-[16px] trans;
     }
@@ -47,7 +59,7 @@
     }
 
     .box-input {
-        @apply w-full lg:flex lg:flex-row lg:justify-start ;
+        @apply w-full lg:flex lg:flex-row lg:justify-around lg:border-2 lg:border-gray-300 lg:h-[20vh] rounded-3xl lg:items-center lg:box-border lg:shadow-xl lg:shadow-gray-300;
     }
 
     .inputall {

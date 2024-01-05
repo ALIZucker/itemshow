@@ -34,7 +34,7 @@
     font-weight: 600;
     text-shadow:  2px 2px 4px #59595b;
 }
-.lableall , .input-text{
+.lableall , .input-text,.radiobox{
     font-family: Domine;
 }
 .table-r > td {

@@ -544,10 +544,46 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.radiobox {
+  margin-left: 5vw;
+  margin-top: 3vh;
+  display: inline-block;
+}
+
+.radiobox > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.radiobox {
+  font-size: 3vw;
+}
+
+#man, #woman {
+  font-weight: 600;
+}
+
+.tabledy {
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+@media (min-width: 1024px) {
+  .tabledy {
+    font-size: 1.9vw;
+  }
+}
+
 .table-trush {
   margin-left: 4vw;
   height: 3vh;
   width: 7vw;
+}
+
+.table-trush:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -687,13 +723,25 @@ video {
 
 .box-input {
   width: 100%;
+  border-radius: 1.5rem;
 }
 
 @media (min-width: 1024px) {
   .box-input {
+    box-sizing: border-box;
     display: flex;
+    height: 20vh;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow-color: #d1d5db;
+    --tw-shadow: var(--tw-shadow-colored);
   }
 }
 
@@ -784,17 +832,13 @@ a:hover:after {
   width: 100%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-\[3vw\] {
-  font-size: 3vw;
 }
 
 @media (min-width: 1024px) {
@@ -830,12 +874,20 @@ a:hover:after {
     margin-left: 5vw;
   }
 
-  .lg\:mt-\[15vh\] {
-    margin-top: 15vh;
+  .lg\:mr-10 {
+    margin-right: 2.5rem;
   }
 
   .lg\:mt-\[16vh\] {
     margin-top: 16vh;
+  }
+
+  .lg\:mt-\[19vh\] {
+    margin-top: 19vh;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:h-\[35vh\] {
@@ -850,8 +902,16 @@ a:hover:after {
     width: 15vw;
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:pl-\[2vw\] {
     padding-left: 2vw;
+  }
+
+  .lg\:text-\[1\.6vw\] {
+    font-size: 1.6vw;
   }
 
   .lg\:text-\[1\.9vw\] {
