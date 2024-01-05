@@ -34,10 +34,12 @@
     font-weight: 600;
     text-shadow:  2px 2px 4px #59595b;
 }
-.lableall , .input-text,.radiobox{
+.lableall , .input-text,.radiobox ,botmodal{
     font-family: Domine;
 }
 .table-r > td {
     font-family: Domine ;
 }
-
+#textmodal{
+    font-family: Domine ;
+}

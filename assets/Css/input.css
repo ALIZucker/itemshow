@@ -94,7 +94,10 @@
 
         transform: translate(-50%, -50%);
     }
-
+    .aback:active{
+        transform: scale(0.9);
+        transform-style: flat;
+    }
     .aback {
         display: block;
         width: 42vw;
@@ -109,6 +112,26 @@
         text-align: center;
 
         transition: all .35s;
+    }
+    #botmodal{
+        @apply px-[5vw] text-[3.5vw] font-semibold mt-[3vh] border-2 border-gray-400 bg-transparent cursor-pointer;
+    }
+
+    #textmodal{
+        @apply text-[3.5vw] font-semibold mt-[2vw] px-[1vw];
+    }
+    #box-modal{
+        @apply w-[70vw] h-[35vh] border-2 border-b-neutral-600 fixed top-[-50vh] left-[15vw] bg-gray-300 flex justify-center flex-col items-center
+        rounded-[12px];
+    }
+    #image-modal{
+        @apply w-[25vw] h-[19vh];
+    }
+    #botmodal:hover{
+        transform: scale(1.2);
+        background-color: #333333;
+        color: white;
+        transition: all 0.3s ease-in;
     }
 
     a span {

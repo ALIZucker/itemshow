@@ -47,25 +47,23 @@
 
 </header>
 <main class=" mt-[4vh]">
-
     <form class="box-input">
-
         <label for="nameuser" class="lableall lg:text-[1.9vw] ">Username</label>
-        <input type="text" id="nameuser" placeholder="Name" class="input-text"><br>
+        <input type="text" id="nameuser" placeholder="Name" required class="input-text"><br>
         <br>
         <label for="mobile" class="lableall lg:text-[1.9vw] lg:ml-[5vw]">mobile</label>
         <input type="number" id="mobile" placeholder="091112346789" class="ml-[5vw] lg:ml-[0] input-text ">
         <div class="radiobox  lg:text-[1.6vw] lg:flex-row lg:flex lg:mr-10 ">
             <label>Gender:</label>
-            <input type="radio"  name="radio" id="man">
+            <input type="radio" name="radio" id="man">
             <label>Man</label>
-            <input type="radio"  name="radio" id="woman">
+            <input type="radio" name="radio" id="woman">
             <label>woman</label>
         </div>
 
         <div>
             <div onclick="addPerson()" class="wrapper left-[50%] mt-[5vh] lg:mt-[19vh]  lg:left-[20%] cursor-pointer ">
-                <a  class="aback lg:h-[7vh] lg:text-[2.1vw] lg:w-[15vw]"><span>Create</span></a>
+                <a class="aback lg:h-[7vh] lg:text-[2.1vw] lg:w-[15vw]"><span>Create</span></a>
             </div>
         </div>
     </form>
@@ -79,6 +77,11 @@
 
 
 </main>
+<div id="box-modal">
+    <img id="image-modal" src="assets/image/well-done.png">
+    <span id="textmodal" >The information was saved correctly</span>
+    <span onclick="botmodal()" id="botmodal">NEXT</span>
+</div>
 <script src="assets/js/jscript.js"></script>
 </body>
 </html>

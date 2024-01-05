@@ -1,16 +1,25 @@
-//variable
+////////////////////////////////////////////////variable
 const tableRow = document.getElementById('createtable');
 const Username = document.getElementById('nameuser');
 const mobile = document.getElementById('mobile');
 const man = document.getElementById('man');
-const woman = document.getElementById('woman');
 
-//main Code
+const modalBox = document.getElementById('box-modal');
+const imagemodal = document.getElementById('image-modal');
+const textmodal = document.getElementById('textmodal');
+///////////////////////////////////////////////main Code
 
 let customer = defultValue()
 showTable(customer)
 
-//function
+////////////////////////////////////////////////function
+
+function botmodal() {
+    modalBox.style.top = "-50vh";
+    modalBox.style.transition = "all 0.5s ease-out"
+
+}
+
 function removeitem(id) {
     console.log(id)
     const temparray = [];
@@ -24,16 +33,39 @@ function removeitem(id) {
     showTable(temparray);
 }
 
+function valadation(namme, phoneme) {
+    let boolvalue;
+    if (namme === "") {
+        imagemodal.src = "assets/image/error.png"
+        textmodal.innerHTML = "Unfortunately, no text has been entered"
+        modalBox.style.top = "32vh";
+        modalBox.style.transition = "all 1s ease-out"
+        boolvalue = false;
+    } else {
+        imagemodal.src = "assets/image/well-done.png"
+        textmodal.innerHTML = "The information was saved correctly"
+        modalBox.style.top = "32vh";
+        modalBox.style.transition = "all 1s ease-out"
+        boolvalue = true;
+    }
+    return boolvalue;
+}
 
 function addPerson() {
+
+    let bool = valadation(Username.value, mobile.value)
+
     let p;
-    if (man.checked) {
-        p = createPerson(Username.value, mobile.value, "assets/image/pic5.jpg")
-    } else {
-        p = createPerson(Username.value, mobile.value, "assets/image/pic6.jpg")
+    if (bool) {
+        if (man.checked) {
+            p = createPerson(Username.value, mobile.value, "assets/image/pic5.jpg")
+        } else {
+            p = createPerson(Username.value, mobile.value, "assets/image/pic6.jpg")
+        }
+        customer.push(p)
+        showTable(customer)
     }
-    customer.push(p)
-    showTable(customer)
+
 }
 
 function defultValue() {
