@@ -25,6 +25,7 @@
 
     .table-r {
         @apply hover:bg-gray-300;
+        transition: all 1s ease-in-out;
     }
 
     .headertable {

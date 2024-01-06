@@ -18,14 +18,18 @@ showTable(customer)
 function botmodal() {
     modalBox.style.top = "-50vh";
     modalBox.style.transition = "all 0.5s ease-out"
-    bodymodal.style.display="none"
+    bodymodal.style.display = "none"
 
 }
 
 function removeitem(id) {
-    console.log(id)
-    const temparray = [];
+    imagemodal.src = "assets/image/delete.png"
+    textmodal.innerHTML = "Deleted successfully"
+    modalBox.style.top = "32vh";
+    modalBox.style.transition = "all 0.5s ease-in-out"
+    bodymodal.style.display = "block"
 
+    const temparray = [];
     customer.forEach((value, index) => {
         if (index !== id) {
             temparray.push(value);
@@ -42,14 +46,15 @@ function valadation(namme, phoneme) {
         textmodal.innerHTML = "Unfortunately, no text has been entered"
         modalBox.style.top = "32vh";
         modalBox.style.transition = "all 1s ease-out"
-        bodymodal.style.display="block"
+        bodymodal.style.display = "block"
         boolvalue = false;
-    } else {
+    }
+   else {
         imagemodal.src = "assets/image/well-done.png"
         textmodal.innerHTML = "The information was saved correctly"
         modalBox.style.top = "32vh";
         modalBox.style.transition = "all 1s ease-out"
-        bodymodal.style.display="block"
+        bodymodal.style.display = "block"
         boolvalue = true;
     }
     return boolvalue;
@@ -96,7 +101,7 @@ function showTable(myCustom) {
 <th>Id</th> <th>Photo</th><th>Name</th><th>Mobile</th><th>button</th>
 </tr>`
     myCustom.forEach((value, index) => {
-        textStr += `<tr class="table-r" ><td><span>${index + 1}</span></td>
+        textStr += `<tr class="table-r " ><td><span>${index + 1}</span></td>
                 <td class=" py-3 lg:pl-[2vw]"><img class="table-image"
                                                   src="${value.srcimg}"></td>
                  <td><span>${value.FirstName}</span></td>
