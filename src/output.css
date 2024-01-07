@@ -579,7 +579,7 @@ video {
 .table-trush {
   margin-left: 4vw;
   height: 3vh;
-  width: 7vw;
+  width: 5vw;
 }
 
 .table-trush:hover {
@@ -590,7 +590,7 @@ video {
   .table-trush {
     margin-left: 3vw;
     height: 5vh;
-    width: 3vw;
+    width: 2vw;
   }
 }
 
@@ -604,14 +604,14 @@ video {
 
 .table-image {
   margin-left: 3vw;
-  height: 7vh;
+  height: auto;
   width: 13vw;
   border-radius: 16px;
 }
 
 @media (min-width: 1024px) {
   .table-image {
-    height: 17vh;
+    height: auto;
     width: 15vw;
   }
 }
@@ -633,6 +633,7 @@ video {
 
 .name-pro {
   font-size: 5vw;
+  text-transform: capitalize;
   letter-spacing: 0.05em;
 }
 

@@ -16,11 +16,11 @@
     }
 
     .table-trush {
-        @apply ml-[4vw] w-[7vw] h-[3vh] lg:w-[3vw] lg:h-[5vh] lg:ml-[3vw] hover:cursor-pointer;
+        @apply ml-[4vw] w-[5vw] h-[3vh] lg:w-[2vw] lg:h-[5vh] lg:ml-[3vw] hover:cursor-pointer;
     }
 
     .table-image {
-        @apply ml-[3vw] w-[13vw] h-[7vh] lg:w-[15vw] lg:h-[17vh] rounded-[16px] trans;
+        @apply ml-[3vw] w-[13vw] h-auto lg:w-[15vw] lg:h-auto rounded-[16px] trans;
     }
 
     .table-r {
@@ -34,7 +34,7 @@
     }
 
     .name-pro {
-        @apply text-[5vw] tracking-wider lg:text-[3vw];
+        @apply text-[5vw] tracking-wider lg:text-[3vw] capitalize;
     }
 
     .input-text {
